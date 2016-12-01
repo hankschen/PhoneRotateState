@@ -1,5 +1,6 @@
 package com.example.hanks.phonerotatestate;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         Sensor sensor=sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
         int delay=SensorManager.SENSOR_DELAY_NORMAL;
         sensorManager.registerListener(sensorEventListener,sensor,delay);
+    }
+
+    public void onCompass(View view){
+        Intent intent = new Intent(MainActivity.this, compass.class);
+        startActivity(intent);
     }
 
     SensorEventListener sensorEventListener=new SensorEventListener() {
@@ -99,7 +105,4 @@ public class MainActivity extends AppCompatActivity {
         imageWidth.setImageBitmap(bmp_PhoneWidthEmpty);
 
     }
-
-
-
 }

@@ -17,17 +17,19 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Start Rotate"
+            android:text="Phone_Rotate"
             android:onClick="onStartRotate"
+            android:layout_weight="1"
             android:id="@+id/button" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:onClick="onSurface"
+            android:text="Compass"
+            android:layout_weight="1"
+            android:onClick="onCompass"
             android:id="@+id/button2" />
     </LinearLayout>
 
